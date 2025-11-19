@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scribble & Spark Co — Our Location</title>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2w1Q0vNw1K2vQmWf5Kk1QbYp1x1p+1w2e1wW6Nw=" crossorigin=""/>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 1rem; }
+    .map-card { max-width: 900px; margin: 0 auto; background: #fff; border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); overflow: hidden; }
+    #map { width: 100%; height: 480px; }
+    .map-header { padding: 1rem; background: #f8f5f0; color: #8b4513; }
+    .map-footer { padding: 0.8rem 1rem; font-size: 0.95rem; color: #555; }
+    .map-controls { display: flex; gap: 0.5rem; align-items: center; }
+    .btn { background: #d2691e; color: white; border: none; padding: 0.45rem 0.8rem; border-radius: 6px; cursor: pointer; }
+    .btn--ghost { background: transparent; color: #8b4513; border: 1px solid #e6d9cf; }
+  </style>
+</head>
+<body>
+  <div class="map-card">
+    <div class="map-header">
+      <h2 style="margin:0;">Our Workshop – Rosebank College Campus</h2>
+      <p style="margin:0.4rem 0 0 0;">239 Pretorius Street, Pretoria CBD</p>
+    </div>
+
+    <div id="map"></div>
+
+    <div class="map-footer">
+      <div class="map-controls">
+        <button id="zoomHome" class="btn">Zoom to Location</button>
+        <button id="openGoogle" class="btn btn--ghost">Open in Google Maps</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-QV1g6q0iXv8dW3Qz3rGgNfH0u5Y1bQ+3kz6h6s9Y8Gk=" crossorigin=""></script>
+  <script>
+    // Coordinates for Rosebank College – Pretoria CBD campus
+    const workshopLatLng = [-25.747778, 28.195278]; // Source: GPS from contact listing :contentReference[oaicite:0]{index=0}
+
+    // Initialize the map
+    const map = L.map('map').setView(workshopLatLng, 16);
+
+    // Add base tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Marker with default icon
+    L.marker(workshopLatLng)
+      .addTo(map)
+      .bindPopup('<strong>Rosebank College – Pretoria CBD</strong><br>239 Pretorius St, Pretoria, 0001')
+      .openPopup();
+
+    // Zoom home button
+    document.getElementById('zoomHome').addEventListener('click', () => {
+      map.setView(workshopLatLng, 16, { animate: true });
+    });
+
+    // Open in Google Maps
+    document.getElementById('openGoogle').addEventListener('click', () => {
+      const url = `https://www.google.com/maps/search/?api=1&query=${workshopLatLng[0]},${workshopLatLng[1]}`;
+      window.open(url, '_blank');
+    });
+
+    // Close popup on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        map.closePopup();
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Scribble & Spark Co offers creative design, branding, digital content, and professional services tailored to bring your ideas to life.">
+
+    <title>Scribble & Spark Co - Services</title>
+    <link rel="stylesheet" href="css_assets/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">Scribble & Spark Co</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="mission&vision.html">Mission</a></li>
+                    <li><a href="enquiries.html">Enquiries</a></li>
+                    <li><a href="contacts.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Get in touch with our team for any questions, custom orders, or just to say hello.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Call Us</h3>
+                    <p>Phone: (+27) 123-SPARK</p>
+                    <p>Toll Free: 1-800-CANDLES</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email Us</h3>
+                    <p>General: hello@scribbleandspark.co</p>
+                    <p>Orders: orders@scribbleandspark.co</p>
+                    <p>Custom: custom@scribbleandspark.co</p>
+                    <p>We respond within 24 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-form">
+                <h2 style="text-align: center; color: #8b4513; margin-bottom: 2rem;">Send Us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="custom">Custom Order</option>
+                            <option value="wholesale">Wholesale Inquiry</option>
+                            <option value="workshop">Workshop Information</option>
+                            <option value="complaint">Complaint/Issue</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2 style="text-align: center; color: #8b4513; margin-bottom: 2rem;">Find Our Workshop</h2>
+
+            <!-- Interactive Map -->
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 123 Artisan Lane<br>Pretoria , 0198</p>
+                    <p>📞 (+27) 123-SPARK</p>
+                    <p>✉️ hello@scribbleandspark.co</p>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">📷</a>
+                        <a href="#">🐦</a>
+                        <a href="#">📌</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="mission.html">Mission</a></li>
+                        <li><a href="enquiries.html">Enquiries</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Care Instructions</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates about new collections and special offers.</p>
+                    <p style="margin-top: 1rem;">
+                        <input type="email" placeholder="Your email" style="padding: 0.5rem; border: none; border-radius: 5px; width: 100%; margin-bottom: 0.5rem;">
+                        <button style="background: #d2691e; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; width: 100%;">Subscribe</button>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Scribble & Spark Co. All rights reserved. | Handcrafted with ❤️ in South Africa </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+    <script>
+        // Rosebank College Pretoria CBD Coordinates
+        const workshopLatLng = [-25.747778, 28.195278];
+
+        const map = L.map('map').setView(workshopLatLng, 16);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        L.marker(workshopLatLng)
+            .addTo(map)
+            .bindPopup('<strong>Rosebank College – Pretoria CBD</strong><br>239 Pretorius St, Pretoria, 0001')
+            .openPopup();
+    </script>
+
+    <script src="js_assets/forms.js"></script>
+</body>
+</html>
